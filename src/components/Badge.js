@@ -11,7 +11,7 @@ render (){
 
         <div className="Badge__section-name">
             
-            <img className="Badge__avatar" src ="https://www.gravatar.com/avatar/bc4094ed3653b18eba2198d3872abc84" alt="Avatar"/>
+            <img className="Badge__avatar" src ="https://s.gravatar.com/avatar/bc4094ed3653b18eba2198d3872abc84?s=500" alt="Avatar"/>
             <h1>Marco <br/> Guaman</h1>
         </div>
 
