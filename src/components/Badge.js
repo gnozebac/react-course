@@ -1,9 +1,10 @@
 import React from 'react';
 import './styles/Badge.css';
-import confLogo from '../images/badge-header.svg';
+import confLogo from '../images/logo-blanco-suda.png';
 
 class Badge extends React.Component{
 render (){
+
     return <div className="Badge">
         <div className="Badge__header">
         <img src ={confLogo} alt="logo suda"/>
@@ -12,16 +13,16 @@ render (){
         <div className="Badge__section-name">
             
             <img className="Badge__avatar" src ="https://s.gravatar.com/avatar/bc4094ed3653b18eba2198d3872abc84?s=500" alt="Avatar"/>
-            <h1>Marco <br/> Guaman</h1>
+            <h1>{this.props.firstname} <br/> {this.props.lastname}</h1>
         </div>
 
         <div className="Badge__section-info">            
-            <p>Teacher</p>
-            <p>@gnozebac</p>
+            <p>{this.props.job}</p>
+            <p>@{this.props.tw}</p>
         </div>
     
         <div className="Badge__footer">
-            #magbdigital
+            #casaAbiertaITS
         </div>
 
     </div>;
