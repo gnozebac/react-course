@@ -2,6 +2,9 @@ import React from 'react';
 
 import './styles/Navbar.css';
 class BadgeForm extends React.Component{
+    state={
+        jobtittle:'designer',
+    };
     handleChange = e => {
         /*console.log({
           name: e.target.name,
@@ -19,6 +22,7 @@ class BadgeForm extends React.Component{
       handleSubmit = e => {
         e.preventDefault();
         console.log('Form was submitted');
+        console.log(this.state);
       };
     
       render() {
@@ -35,6 +39,7 @@ class BadgeForm extends React.Component{
                   className="form-control"
                   type="text"
                   name="firstName"
+                  value={this.state.firstName} // De no controlados a controlados. Leer del estado de nombre
                 />
               </div>
 
@@ -45,6 +50,7 @@ class BadgeForm extends React.Component{
                   className="form-control"
                   type="text"
                   name="lastName"
+                  value={this.state.lastName}
                 />
               </div>
 
@@ -55,6 +61,7 @@ class BadgeForm extends React.Component{
                   className="form-control"
                   type="email"
                   name="email"
+                  value={this.state.email}
                 />
               </div>
 
@@ -65,6 +72,7 @@ class BadgeForm extends React.Component{
                   className="form-control"
                   type="text"
                   name="jobtittle"
+                  value={this.state.jobtittle}
                 />
               </div>
 
@@ -75,6 +83,7 @@ class BadgeForm extends React.Component{
                   className="form-control"
                   type="text"
                   name="twitter"
+                  value={this.state.twitter}
                 />
               </div>
     
