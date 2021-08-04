@@ -3,9 +3,12 @@ import React from 'react';
 import './styles/Navbar.css';
 class BadgeForm extends React.Component{
     handleChange = e => {
-        console.log({
+        /*console.log({
           name: e.target.name,
           value: e.target.value,
+        });*/
+        this.setState({
+            [e.target.name]: e.target.value,
         });
       };
     
@@ -24,6 +27,7 @@ class BadgeForm extends React.Component{
             <h1>New Attendant</h1>
     
             <form onSubmit={this.handleSubmit}>
+              
               <div className="form-group">
                 <label>First Name</label>
                 <input
@@ -31,6 +35,46 @@ class BadgeForm extends React.Component{
                   className="form-control"
                   type="text"
                   name="firstName"
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Last Name</label>
+                <input
+                  onChange={this.handleChange}
+                  className="form-control"
+                  type="text"
+                  name="lastName"
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Email</label>
+                <input
+                  onChange={this.handleChange}
+                  className="form-control"
+                  type="email"
+                  name="email"
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Job tittle</label>
+                <input
+                  onChange={this.handleChange}
+                  className="form-control"
+                  type="text"
+                  name="jobtittle"
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Twitter</label>
+                <input
+                  onChange={this.handleChange}
+                  className="form-control"
+                  type="text"
+                  name="twitter"
                 />
               </div>
     
