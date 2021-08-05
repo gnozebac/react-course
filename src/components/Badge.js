@@ -17,8 +17,8 @@ render (){
         </div>
 
         <div className="Badge__section-info">            
-            <p>{this.props.job}</p>
-            <p>@{this.props.tw}</p>
+            <p>{this.props.jobtittle}</p>
+            <p>@{this.props.twitter}</p>
         </div>
     
         <div className="Badge__footer">
