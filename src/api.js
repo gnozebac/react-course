@@ -24,11 +24,12 @@ async function callApi(endpoint, options = {}) {
 const api = {
   badges: {
     list() {
-      throw new Error('Not founf 500' );//simular un error
-      //return callApi('/badges');
+      //throw new Error('Not founf 500' );//simular un error
+      return callApi('/badges');
       //return []; // en el caso de devolver vacio
     },
     create(badge) {
+      //throw new Error('Error 500' );//simular un error
       return callApi(`/badges`, {
         method: 'POST',
         body: JSON.stringify(badge),
