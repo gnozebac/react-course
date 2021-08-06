@@ -24,7 +24,7 @@ async function callApi(endpoint, options = {}) {
 const api = {
   badges: {
     list() {
-      throw new Error('Not founf');//simular un error
+      throw new Error('Not founf 500' );//simular un error
       //return callApi('/badges');
       //return []; // en el caso de devolver vacio
     },

@@ -4,6 +4,8 @@ import './styles/Badges.css';
 
 import api from '../api';
 import BadgesList from '../components/BadgesList';
+import PageLoading from '../components/PageLoading';
+import PageError from '../components/PageError';
 import { Link } from 'react-router-dom';
 
 class Badges extends React.Component{
@@ -32,10 +34,11 @@ fetchData = async () => {
 
 render(){
     if(this.state.loading===true){
-        return 'loading ..';
+        return <PageLoading />;        
     }    
     if(this.state.error){
-        return `Error ${this.state.error.message}`;
+        //return `Error ${this.state.error.message}`;
+        return <PageError error = {this.state.error}/>;
     }    
     
     return (
